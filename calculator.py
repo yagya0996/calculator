@@ -18,6 +18,9 @@ def power(a, b):
     """Return a raised to the power of b."""
     return a ** b
 
+def modulo(a, b):
+    return a % b
+
 
 if __name__ == "__main__":
     print("2 + 3 =", add(2, 3))
