@@ -26,13 +26,25 @@ def power(a, b):
     return a ** b
 
 def modulo(a, b):
+    if b == 0:
+        raise ValueError("Cannot take modulo by zero")
     return a % b
 
 
 if __name__ == "__main__":
-    a = float(input("First number: "))
-    op = input("Operation (+ - * / ** %): ")
-    b = float(input("Second number: "))
     operations = {"+": add, "-": subtract, "*": multiply,
                   "/": divide, "**": power, "%": modulo}
-    print("Result:", operations[op](a, b))
+    try:
+        a = float(input("First number: "))
+        op = input("Operation (+ - * / ** %): ")
+        b = float(input("Second number: "))
+    except ValueError:
+        print("Please enter valid numbers.")
+    else:
+        if op not in operations:
+            print(f"Unknown operation: {op}")
+        else:
+            try:
+                print("Result:", operations[op](a, b))
+            except (ValueError, ZeroDivisionError) as error:
+                print("Error:", error)
