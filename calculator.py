@@ -30,6 +30,9 @@ def modulo(a, b):
 
 
 if __name__ == "__main__":
-    print("2 + 3 =", add(2, 3))
-    print("5 - 2 =", subtract(5, 2))
-    print("2 ** 3 =", power(2, 3))
+    a = float(input("First number: "))
+    op = input("Operation (+ - * / ** %): ")
+    b = float(input("Second number: "))
+    operations = {"+": add, "-": subtract, "*": multiply,
+                  "/": divide, "**": power, "%": modulo}
+    print("Result:", operations[op](a, b))
