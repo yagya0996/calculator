@@ -25,6 +25,9 @@ def power(a, b):
     """Return a raised to the power of b."""
     return a ** b
 
+def cube(a):
+    return a ** 3
+
 def modulo(a, b):
     if b == 0:
         raise ValueError("Cannot take modulo by zero")
