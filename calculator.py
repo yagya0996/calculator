@@ -28,6 +28,10 @@ def power(a, b):
 def cube(a):
     return a ** 3
 
+def square(a):
+    """Return a squared."""
+    return a * a
+
 def modulo(a, b):
     if b == 0:
         raise ValueError("Cannot take modulo by zero")
