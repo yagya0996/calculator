@@ -43,7 +43,7 @@ if __name__ == "__main__":
                   "/": divide, "**": power, "%": modulo}
     try:
         a = float(input("First number: "))
-        op = input("Operation (+ - * / ** %): ")
+        op = input("Operation (+ - * / ** %): ").strip()
         b = float(input("Second number: "))
     except ValueError:
         print("Please enter valid numbers.")
