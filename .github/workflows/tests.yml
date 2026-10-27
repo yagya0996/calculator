@@ -1,0 +1,17 @@
+name: Tests
+
+on:
+  pull_request:          # every PR, including each new push to it
+  push:
+    branches: [main]     # and every merge into main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4        # download your repo onto the machine
+      - uses: actions/setup-python@v5    # install Python
+        with:
+          python-version: "3.12"
+      - run: pip install pytest
+      - run: pytest -v
