@@ -37,6 +37,10 @@ def modulo(a, b):
         raise ValueError("Cannot take modulo by zero")
     return a % b
 
+def percent(a, b):
+    """Return a percent of b, e.g. percent(20, 50) -> 10.0"""
+    return a * b / 100
+
 
 if __name__ == "__main__":
     operations = {"+": add, "-": subtract, "*": multiply,

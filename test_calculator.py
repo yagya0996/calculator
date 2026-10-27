@@ -1,5 +1,5 @@
 import pytest
-from calculator import add, subtract, multiply, divide, power, modulo, square_root
+from calculator import add, subtract, multiply, divide, power, modulo, square_root, percent
 
 
 def test_add():
@@ -33,3 +33,7 @@ def test_modulo():
 
 def test_square_root():
     assert square_root(9) == 3.0
+
+
+def test_percent():
+    assert percent(20, 50) == 10.0
